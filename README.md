@@ -3,6 +3,12 @@
 This is a small structure that is intended to be used as a template 
 for displaying multiple Redoc pages on one site with a navbar.
 
+**Local Users:** Currently this template structure doesn't support the `index.html` file being
+opened locally (e.g. from a `file://` path) by default, as it presents CORS issues when attempting
+to do the page redirects.
+A way around this is to disable the iframe detection by editing the redoc pages to remove the 
+`script` tag that imports the `js/redoc-pages.js` file.
+
 ## Information About Redoc
 
 For information about Redoc, please see
