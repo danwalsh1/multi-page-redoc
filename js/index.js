@@ -10,4 +10,7 @@ window.addEventListener('load', (event) => {
 function redocPage(pageName) {
     window.frames['redocContainer'].location = pageName + '.html?unique=' + Date.now();
     window.history.pushState("", "", "?page=" + pageName);
+    if(!$('.navbar')[0].classList.contains('rd-navbar')) {
+        $('.navbar-toggler').trigger('click');
+    }
 }
